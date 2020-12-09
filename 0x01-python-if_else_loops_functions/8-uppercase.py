@@ -2,7 +2,7 @@
 
 
 def uppercase(str):
-    for c in range(len[str]):
+    for c in range(len(str)):
         alphabet = ord(str[c])
         if (alphabet >= 97) and (alphabet <= 122):
             alphabet = alphabet - 32
