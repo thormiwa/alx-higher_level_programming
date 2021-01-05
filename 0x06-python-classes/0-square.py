@@ -2,4 +2,5 @@
 
 
 class Square:
+    '''a class named square'''
     pass
