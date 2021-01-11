@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''define an empty class'''
 
+
 class Rectangle:
     ''' a class named rectangle'''
     
@@ -10,7 +11,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
-    
+        
     @property
     def width(self):
         """To retrieve width."""
