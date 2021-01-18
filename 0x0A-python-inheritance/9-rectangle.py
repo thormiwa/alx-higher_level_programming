@@ -4,18 +4,23 @@
 A module for BaseGeometry class.
 """
 
-Rectangle = __import__('9-rectangle').Rectangle
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
-class Square(Rectangle):
-    """A square class."""
+class Rectangle(BaseGeometry):
+    """A rectangle class."""
 
-    def __init__(self, size):
-        """Initialize the square class."""
-        self.integer_validator("size", size)
-        self.__size = size
-        super().__init__(size, size)
+    def __init__(self, width, height):
+        """Initialize the rectangle class."""
+        self.__width = width
+        self.__height = height
+        BaseGeometry.integer_validator(self, "width", width)
+        BaseGeometry.integer_validator(self, "height", height)
 
     def area(self):
-        """Returns the area of a rectangle."""
-        return (self.__size ** 2)
+        """A method that returns the rectangle area."""
+        return self.__width * self.__height
+
+    def __str__(self):
+        """A method that creates a string object from a given object"""
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
